@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
 import Photo from './Photo';
+import NotFound from './NotFound';
 
-class PhotoContainer extends Component {
+const PhotoContainer = props => {
 
-    render() {
+    const results = props.data;
+    let images;
+
+    if(results.length > 0){
+        images = results.map(image => <Photo photo={image} key={image.id} /> );
+    } else {
+        images = <NotFound />
+    }
+
         return (
-            <div class="photo-container">
+            <div className="photo-container">
                 <h2>Results</h2>
                 <ul>
-                    <Photo />
+                    { images }
                 </ul>
               </div>
         )
     }
-}
+
 
 
 export default PhotoContainer;
