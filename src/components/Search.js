@@ -19,7 +19,7 @@ class Search extends Component {
     e.currentTarget.reset();
   }
 
-  render(){
+  render() {
     return (
         <form className="search-form" onSubmit={this.handleSubmit}>
             <input type="search" onChange={this.onSearchChange} ref={input => this.query = input} name="search" placeholder="Search" required/>

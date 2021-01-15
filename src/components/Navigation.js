@@ -6,9 +6,10 @@ class Navigation extends Component {
         return(
             <nav className="main-nav" onClick={this.onNavChange} >
             <ul>
-                <li><NavLink to='/cats'>Cats</NavLink></li>
-                <li><NavLink to='/dogs'>Dogs</NavLink></li>
-                <li><NavLink to='/computers'>Computers</NavLink></li>
+                <li><NavLink to='/autumn'>Autumn</NavLink></li>
+                <li><NavLink to='/winter'>Winter</NavLink></li>
+                <li><NavLink to='/spring'>Spring</NavLink></li>
+                <li><NavLink to='/summer'>Summer</NavLink></li>
             </ul>
             </nav>
         )
