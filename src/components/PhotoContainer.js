@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Photo from './Photo';
 import NotFound from './NotFound';
 
 const PhotoContainer = props => {
-
     const results = props.data;
     let images;
 
@@ -13,16 +12,14 @@ const PhotoContainer = props => {
         images = <NotFound />
     }
 
-        return (
-            <div className="photo-container">
-                <h2>Results</h2>
-                <ul>
-                    { images }
-                </ul>
-              </div>
-        )
-    }
-
-
+    return (
+        <div className="photo-container">
+            <h2>Results</h2>
+            <ul>
+                { images }
+            </ul>
+       </div>
+    )
+}
 
 export default PhotoContainer;
